@@ -67,3 +67,42 @@
 .buttons button:hover{
     transform:scale(1.05)
 }
+
+
+
+
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-left img {
+    width: 200px;
+    margin-bottom: 20px;
+  }
+
+  .about-right h1 {
+    font-size: 28px;
+  }
+
+  .about-right h3 {
+    font-size: 16px;
+  }
+
+  .about-right p {
+    font-size: 14px;
+  }
+
+  .skills {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
