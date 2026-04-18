@@ -1,38 +1,80 @@
-import "./Aboutus.css"
+import "./Aboutus.css";
+import { FaGraduationCap, FaSchool, FaBriefcase, FaTrophy, FaRocket } from "react-icons/fa";
 
-function Aboutus(){
-    return (
-        <section className="about">
-            <div className="about-container">
-            <div className="about-left">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnsjemrQJ1aY8GXzDH7zyW2PeSr0NoRlUL0Q&s" alt="" />
-                </div>
+function Aboutus() {
+  return (
+    <section className="about">
+      <h1 className="about-title">About Me</h1>
 
+      <div className="about-container">
 
-            <div className="about-right">
-                <h1>ANKUR BISWAS</h1>
-                <h3>SOFTWARE ENGINNER INTERN AT ICPES</h3>
-                <p>I AM CREATING RESPONSIVE APPLICATION  USING MERN/PYTHON AND ALSO BUILDS ML MODELS USING PYTHON LIBRARIES</p>
+        {/* Education */}
+        <div className="about-card">
+          <FaGraduationCap className="icon" />
+          <h2>Education</h2>
+          <p>
+            I am currently pursuing B.Tech in Computer Science (AI/ML)
+            from Brainware University, Kolkata.
+            <br /><br />
+            My academic focus is on building strong fundamentals in
+            Data Structures, Web Development, and Machine Learning.
+          </p>
+        </div>
 
-                
-            <div className="skills">
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JAVASCRIPT</span>
-                <span>REACT</span>
-                </div>    
+        {/* Schooling */}
+        <div className="about-card">
+          <FaSchool className="icon" />
+          <h2>Schooling</h2>
+          <p>
+            Completed Higher Secondary Education in Science from
+            Ramakrishna Mission.
+            <br /><br />
+            Developed discipline, logical thinking, and a strong
+            problem-solving mindset during my school years.
+          </p>
+        </div>
 
-                <div className="buttons">
-                    <button>Download CV</button>
-                    <button>Contact Me</button>
-                </div>
-                </div>
+        {/* Internship */}
+        <div className="about-card">
+          <FaBriefcase className="icon" />
+          <h2>Internship</h2>
+          <p>
+            Worked as a Cloud & Web Development Intern at ICPES PRIVATE LIMITED.
+            <br /><br />
+            Gained hands-on experience in real-world projects,
+            API integration, and scalable web application design.
+          </p>
+        </div>
 
-            </div>
-            
-        </section>
+        {/* Achievements */}
+        <div className="about-card">
+          <FaTrophy className="icon" />
+          <h2>Achievements</h2>
+          <p>
+            Built multiple real-world projects including Resume Analyzer
+            and a Video Calling App.
+            <br /><br />
+            Actively participated in hackathons and continuously improving
+            problem-solving skills.
+          </p>
+        </div>
 
-    )
+        {/* Future Goal */}
+        <div className="about-card">
+          <FaRocket className="icon" />
+          <h2>Future Goal</h2>
+          <p>
+            My goal is to become a top software engineer in a
+            product-based company.
+            <br /><br />
+            I am focused on mastering MERN stack, DSA, and AI/ML
+            to build scalable and impactful products.
+          </p>
+        </div>
+
+      </div>
+    </section>
+  );
 }
 
 export default Aboutus;

@@ -1,0 +1,234 @@
+/* MAIN HERO */
+.hero {
+  min-height: 100vh;
+  background: linear-gradient(270deg, #0a0a0a, #111827, #0a0a0a);
+  background-size: 600% 600%;
+  animation: gradientBG 12s ease infinite;
+
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10%;
+  overflow: hidden;
+}
+
+/* BACKGROUND ANIMATION */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* LEFT */
+.hero-left {
+  max-width: 600px;
+}
+
+/* RIGHT */
+.hero-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* TEXT */
+.hello {
+  color: gray;
+  margin-bottom: 10px;
+}
+
+.hero h1 {
+  font-size: 70px;
+  font-weight: bold;
+}
+
+.hero h2 {
+  margin-top: 20px;
+  font-weight: 500;
+}
+
+.desc {
+  margin: 15px 0;
+  color: #aaa;
+}
+
+/* GRADIENT TEXT */
+.gradient-text {
+  background: linear-gradient(135deg, #6366f1, #a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* BUTTONS */
+.hero-buttons button {
+  padding: 12px 20px;
+  margin-right: 10px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(135deg, #6366f1, #a855f7);
+  color: white;
+  transition: 0.3s;
+}
+
+.hero-buttons button:hover {
+  transform: scale(1.08);
+}
+
+.outline {
+  background: transparent;
+  border: 1px solid #555;
+}
+
+/* STATS */
+.stats {
+  display: flex;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+/* SOCIALS */
+.socials {
+  margin-top: 20px;
+}
+
+.socials a {
+  margin-right: 15px;
+  font-size: 24px;
+  color: white;
+  transition: 0.3s;
+}
+
+.socials a:hover {
+  color: #6366f1;
+}
+
+/* IMAGE */
+.image {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #6366f1;
+  box-shadow: 0 0 40px rgba(99, 102, 241, 0.6);
+  animation: float 4s ease-in-out infinite;
+}
+
+/* FLOAT ANIMATION */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
+
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 50px 20px;
+  }
+
+  .hero-left {
+    max-width: 100%;
+  }
+
+  .hero h1 {
+    font-size: 50px;
+  }
+
+  .hero h2 {
+    font-size: 18px;
+  }
+
+  .stats {
+    justify-content: center;
+  }
+
+  .hero-right {
+    margin-top: 30px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .hero h2 {
+    font-size: 16px;
+  }
+
+  .hero-buttons button {
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  .stats {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .image {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+
+/* SECTION */
+.achievements {
+  padding: 100px 10%;
+  color: white;
+  text-align: center;
+}
+
+.achievements h2 {
+  font-size: 40px;
+  margin-bottom: 60px;
+}
+
+/* GRID */
+.achievements-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+/* BIG CARDS */
+.achievement-card {
+  padding: 40px;
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+
+  transition: 0.3s;
+  min-height: 220px;
+}
+
+/* TEXT */
+.achievement-card h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.achievement-card p {
+  color: #ccc;
+  line-height: 1.6;
+}
+
+/* HOVER EFFECT 🔥 */
+.achievement-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .achievements-container {
+    grid-template-columns: 1fr;
+  }
+}

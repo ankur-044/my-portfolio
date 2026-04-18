@@ -1,21 +1,32 @@
-import { Link } from "react-router-dom";
-import "../pages/Navbar.css"
+import "../pages/Navbar.css";
+import logo from "../Components/img.jpeg"
 
+function Navbar() {
 
-function Navbar(){
-    return(
-        <nav className="navbar">
-            <div className="logo">
-                <img src="https://img.pikbest.com/png-images/20241022/stealth-masked-hacker-gaming-logo-for-gamers_10991543.png!w700wp" alt="logo" />
-            </div>
-            <div className="links">
-                <Link to="/about">About us</Link>
-                <Link to="/contact">Contact us</Link>
-            </div>
-            
-        </nav>
+  const scrollToSection = (id) => {
+    document.getElementById(id).scrollIntoView({
+      behavior: "smooth"
+    });
+  };
 
-    )
+  return (
+    <nav className="navbar">
+
+      <div className="logo">
+        <img src={logo} alt="logo" />
+      </div>
+
+      <div className="links">
+        <button onClick={() => scrollToSection("home")}>Home</button>
+        <button onClick={() => scrollToSection("about")}>About us</button>
+        <button onClick={() => scrollToSection("skills")}>Skills</button>
+        <button onClick={() => scrollToSection("softskills")}>More</button>
+        <button onClick={() => scrollToSection("projects")}>Projects</button>
+        <button onClick={() => scrollToSection("contact")}>Contact us</button>
+      </div>
+
+    </nav>
+  );
 }
 
 export default Navbar;

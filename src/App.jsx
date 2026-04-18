@@ -1,24 +1,24 @@
-import Navbar from "./Components/Navbar"
-import Aboutus from "./pages/Aboutus"
-import Contactus from "./pages/Contactus"
-import {Routes,Route} from "react-router-dom"
+import Navbar from "./Components/Navbar";
+import Hero from "./pages/Hero";
+import Aboutus from "./pages/Aboutus";
+import Skills from "./pages/Skills";
+import SoftSkills from "./pages/SoftSkills";
+import Projects from "./pages/Projects";
+import Contactus from "./pages/Contactus";
 
 function App() {
-  
-
   return (
     <>
-      
-      
-      <Navbar/>
-      <Routes>
-        <Route path="/" element={<Aboutus/>}/>
-        <Route path="/about" element={<Aboutus/>}/>
-        <Route path="/contact" element={<Contactus/>}/>
-      </Routes>
+      <Navbar />
 
+      <section id="home"><Hero /></section>
+      <section id="about"><Aboutus /></section>
+      <section id="skills"><Skills /></section>
+      <section id="softskills"><SoftSkills /></section>
+      <section id="projects"><Projects /></section>
+      <section id="contact"><Contactus /></section>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
